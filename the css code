@@ -1,0 +1,46 @@
+/* Custom utility classes to style the WhatsApp icon/logo container */
+.navbar-brand img, .navbar-brand i {
+  margin-left: 10px;
+}
+
+/* Adjust the vertical spacing of the nav links when in dropdown mode (< 992px) */
+@media (max-width: 991.98px) {
+  .navbar-nav .nav-link {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5e7eb; /* Subtle separator line for dropdown items */
+    color: #334155 !important;
+    font-weight: 500;
+  }
+  
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none; /* Removes the last border line */
+  }
+}
+
+/* Optional tweak: matching standard text sizes for the link names */
+.nav-link {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Specificity Priorities</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 id="id-selector">ID selectors have higher priority than the Class selectors.</h1>
+
+  <h1 id="second">Type selectors have the lowest priority.</h1>
+
+  <h1 class="third">Class selectors have higher priority than the Type selectors.</h1>
+
+  <h1 class="third" style="background-color: #92fdf2; font-style: italic;">Inline styles has the highest priority.</h1>
+
+</body>
+</html>
